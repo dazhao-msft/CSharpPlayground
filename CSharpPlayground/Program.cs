@@ -2,11 +2,20 @@
 
 namespace CSharpPlayground
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var person = new Person() { FirstName = "David", LastName = "Zhao" };
+
+            Console.WriteLine(person);
         }
+    }
+
+    public record Person
+    {
+        public string FirstName { get; init; }
+
+        public string LastName { get; init; }
     }
 }
